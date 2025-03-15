@@ -1,0 +1,173 @@
+[Lacros_Pun]
+    location = "Punta Arenas"
+    shortname = "Pun"
+    loader = 'mira'
+[Lacros_Pun.settings]
+    decoupling = -30
+    grid_time = 7
+    max_no_nodes = 15
+    polarimetry = 'LDR'
+    smooth_cut_sequence = 'sc' # cs cut-smooth | sc smooth-cut
+    station_altitude = 9
+    add_to_fname = '_nmra'
+[Lacros_Pun.settings.peak_finding_params]
+    #roll_velocity = 65 # for 512 bins = 7.92 m/s
+    roll_velocity = 3.2 # now m/s (6.56 m/s)
+    # supress spurious peaks introduced by tails; back to 3 as the other tail filter should work better
+    thres_factor_co = 2.5 # false | factor in linear units
+    thres_factor_cx = 3.5 # false | factor in linear units
+    cal_offset = 0        # dB
+    tail_filter = true    # true | false | omit; only tested with LACROS-Mira 
+    # new: seconds instead of index
+    t_avg = 6             # s
+    h_avg = 0             # m
+    span = 0.3            # m s-1
+    smooth_polyorder = 2  # 0 deactivate | 2 second order
+    prom_thres = 0.3      # dB
+    width_thres = 0.0     # m s-1
+
+
+[Polarstern]
+    location = "Polarstern"
+    shortname = "Pol"
+    loader = 'mira'
+[Polarstern.settings]
+    decoupling = -27
+    grid_time = 7
+    max_no_nodes = 15
+    polarimetry = 'LDR'
+    smooth_cut_sequence = 'sc' # cs cut-smooth | sc smooth-cut
+    station_altitude = 12
+    #add_to_fname = '_rectwin'
+[Polarstern.settings.peak_finding_params]
+    roll_velocity = 3.2 # now m/s (6.56 m/s)
+    # supress spurious peaks introduced by tails; back to 3 as the other tail filter should work better
+    thres_factor_co = 2.5 # false | factor in linear units
+    thres_factor_cx = 3.5 # false | factor in linear units
+    cal_offset = 0        # dB
+    tail_filter = true    # true | false | omit; only tested with LACROS-Mira 
+    # new: seconds instead of index
+    t_avg = 6             # s
+    h_avg = 0             # m
+    span = 0.3            # m s-1
+    smooth_polyorder = 2  # 0 deactivate | 2 second order
+    prom_thres = 0.3      # dB
+    width_thres = 0.0     # m s-1
+
+[kazr_mosaic] 
+    location = "MOSAiC" 
+    shortname = "kazrmosaic" 
+    loader = 'kazr_new'
+[kazr_mosaic.settings] 
+    grid_time = false
+    max_no_nodes = 15 
+    station_altitude = 22
+    polarimetry = 'false' # 'LDR' | 'STSR' | 'false'
+    smooth_cut_sequence = 'sc' # cs cut-smooth | sc smooth-cut
+    #add_to_fname = '_rectwin'
+[kazr_mosaic.settings.peak_finding_params]
+    #vel_smooth = true
+    #vel_smooth = [0.14705882, 0.20588235, 0.29411765, 0.20588235, 0.14705882]
+    #roll_velocity = 65 # for 512 bins = 7.92 m/s
+    roll_velocity = 3.2 # now m/s (6.56 m/s)
+    # supress spurious peaks introduced by tails; back to 3 as the other tail filter should work better
+    thres_factor_co = 2.5 # false | factor in linear units
+    thres_factor_cx = 3.5 # false | factor in linear units
+    # 1dB calibration offset following Griesche and Matrosov
+    cal_offset = 1        # dB
+    tail_filter = false    # true | false | omit; only tested with LACROS-Mira 
+    # new: seconds instead of index
+    t_avg = 7             # s
+    h_avg = 0             # m
+    span = 0.2            # m s-1
+    smooth_polyorder = 2  # 0 deactivate | 2 second order
+    prom_thres = 0.2      # dB
+    width_thres = 0.0     # m s-1
+
+
+[limrad_punta] 
+    location = "Punta Arenas"
+    shortname = "Pun"
+    #loader = 'rpgpy'
+    loader = 'rpg'
+[limrad_punta.settings] 
+    grid_time = false
+    max_no_nodes = 15 
+    tot_spec_scaling = 0.5
+    polarimetry = 'STSR' 
+    smooth_cut_sequence = 'sc' # cs cut-smooth | sc smooth-cut
+    decoupling = -29
+    station_altitude = 22
+[limrad_punta.settings.peak_finding_params.chirp0]
+    thres_factor_co = false # false | factor in linear units
+    thres_factor_cx = 1.5 # false | factor in linear units
+    # new: seconds instead of index
+    t_avg = 0            # s
+    h_avg = 89           # m
+    span = 0.25          # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.5     # dB
+    width_thres = 0      # m s-1
+[limrad_punta.settings.peak_finding_params.chirp1]
+    roll_velocity = 2     # m/s from the right of the spec
+    thres_factor_co = false # false | factor in linear units
+    thres_factor_cx = 1.5 # false | factor in linear units
+    t_avg = 9            # s
+    h_avg = 0            # m
+    span = 0.25          # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.5     # dB
+    width_thres = 0      # m s-1
+[limrad_punta.settings.peak_finding_params.chirp2]
+    thres_factor_co = false # false | factor in linear units
+    thres_factor_cx = 1.5 # false | factor in linear units
+    t_avg = 0            # s
+    h_avg = 0            # m
+    span = 0.2           # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.0     # dB
+    width_thres = 0      # m s-1
+
+	
+	
+[rpg94_hyytiala] 
+    location = "Hyytiälä"
+    shortname = "Hyy"
+    loader = 'rpg'
+[rpg94_hyytiala.settings] 
+    grid_time = false
+    max_no_nodes = 15 
+    tot_spec_scaling = 1
+    polarimetry = 'LDR' 
+    smooth_cut_sequence = 'sc' # cs cut-smooth | sc smooth-cut
+    decoupling = -28.5
+    station_altitude = 150
+[rpg94_hyytiala.settings.peak_finding_params.chirp0]
+    thres_factor_co = false # false | factor in linear units
+    thres_factor_cx = 4 # false | factor in linear units
+    smooth_in_dB = false
+    # new: seconds instead of index
+    t_avg = 9            # s
+    h_avg = 0          # m
+    span = 0.1          # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.5     # dB
+    width_thres = 0      # m s-1
+[rpg94_hyytiala.settings.peak_finding_params.chirp1]
+    thres_factor_co = false # false | factor in linear units
+    thres_factor_cx = 4 # false | factor in linear units
+    smooth_in_dB = false
+    t_avg = 0            # s
+    h_avg = 0            # m
+    span = 0.2           # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.5     # dB
+    width_thres = 0      # m s-1
+[rpg94_hyytiala.settings.peak_finding_params.chirp2]
+    thres_factor_co = false # false | factor in linear units
+    t_avg = 0            # s
+    h_avg = 0            # m
+    span = 0.2          # m s-1
+    smooth_polyorder = 2
+    prom_thres = 0.5     # dB
+    width_thres = 0      # m s-1
