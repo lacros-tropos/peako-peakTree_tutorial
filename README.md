@@ -1,6 +1,37 @@
-# peako peakTree tutorial PrePEP
+# peako peakTree tutorial CCRES/CLU Training School 
 
-Material for the Hands-on part of the peako-peakTree introductory workshop during [PrePEP Conference, 16–21 Mar 2025, Bonn](https://indico.scc.kit.edu/event/4015/).
+Short tutorial into peako and peakTree during the [ACTRIS Cloud Remote Sensing Training School 2025](https://actris.eu/topical-centre/data-centre/announcements-resources/actris-cloud-remote-sensing-training-school-lmu)
+
+## Requirements
+
+* (Ana/mini)conda setup on Windows or Linux (bare venv should work as well)
+* at least 10GB of RAM
+
+## Preparation
+
+```
+mkdir peakopeaktree_ccres_training
+cd peakopeaktree_ccres_training
+conda create --name pp_ccres python=3.13
+conda activate pp_ccres
+
+git clone https://github.com/martin-rdz/peakTree.git
+cd .\peakTree\
+python -m pip install .
+cd ..
+git clone https://github.com/ti-vo/pyPEAKO.git 
+cd pyPEAKO
+python -m pip install .
+cd ..
+python -m pip install pyLARDA 
+conda install jupyterlab
+conda install conda-forge::matplotlib-inline
+git clone -b actris-crs-training https://github.com/lacros-tropos/peako-peakTree_tutorial.git
+cd .\peako-peakTree_tutorial\
+
+jupyter lab --port 9991
+```
+
 
 ## Tutorial files
 
@@ -53,6 +84,10 @@ Material for the Hands-on part of the peako-peakTree introductory workshop durin
 
 - Mech, M., M. Maahn, S. Kneifel, D. Ori, E. Orlandi, P. Kollias, V. Schemann,  and S. Crewell. 2020. “PAMTRA 1.0: The Passive and Active Microwave Radiative TRAnsfer Tool for Simulating Radiometer and Radar Measurements of the Cloudy Atmosphere.” Geoscientific Model Development 13 (9): 4229–51. https://doi.org/10.5194/gmd-13-4229-2020.
 
+## History
+
+* [ERAD Academy, 28 Aug 2022, Locarno](https://www.erad2022.ch/erad2022-academy)
+* [PrePEP Conference, 16–21 Mar 2025, Bonn](https://indico.scc.kit.edu/event/4015/)
 
 ## Authors
 ti-vo and martin-rdz
