@@ -2,12 +2,16 @@
 
 Short tutorial into peako and peakTree during the [ACTRIS Cloud Remote Sensing Training School 2025](https://actris.eu/topical-centre/data-centre/announcements-resources/actris-cloud-remote-sensing-training-school-lmu)
 
-## Requirements
+
+## Traning school jupyter hub
+
+The IPSL Team provided a jupyer kernel with the dependencies **ccres_pp**, make sure that this kernel is selected.
+To run the standalone scripts, select a ipython console with the **ccres_pp** kernel and `%run 01_requests_cloudnet_lv0_data.py`
+
+## Local installation
 
 * (Ana/mini)conda setup on Windows or Linux (bare venv should work as well)
 * at least 10GB of RAM
-
-## Preparation
 
 ```
 mkdir peakopeaktree_ccres_training
@@ -26,6 +30,7 @@ cd ..
 python -m pip install pyLARDA 
 conda install jupyterlab
 conda install conda-forge::matplotlib-inline
+conda install conda-forge::hdbscan
 git clone -b actris-crs-training https://github.com/lacros-tropos/peako-peakTree_tutorial.git
 cd .\peako-peakTree_tutorial\
 
