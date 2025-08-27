@@ -5,6 +5,12 @@ Short tutorial into peako and peakTree during the [ACTRIS Cloud Remote Sensing T
 
 ## Traning school jupyter hub
 
+```
+mkdir peakopeaktree_ccres_training
+cd peakopeaktree_ccres_training
+git clone -b actris-crs-training https://github.com/lacros-tropos/peako-peakTree_tutorial.git
+```
+
 The IPSL Team provided a jupyer kernel with the dependencies **ccres_pp**, make sure that this kernel is selected.
 To run the standalone scripts, select a ipython console with the **ccres_pp** kernel and `%run 01_requests_cloudnet_lv0_data.py`
 
