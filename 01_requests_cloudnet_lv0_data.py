@@ -1,4 +1,8 @@
 # script for downloading data from the cloudnet data portal
+# 
+# Meanwhile there is a cloudnet api client available
+# https://github.com/actris-cloudnet/cloudnet-api-client
+# 
 
 import requests
 import datetime
