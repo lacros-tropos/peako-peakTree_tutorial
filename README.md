@@ -1,6 +1,6 @@
 # peako peakTree tutorial CCRES/CLU Training School 
 
-Short tutorial into peako and peakTree during the [ACTRIS Cloud Remote Sensing Training School 2025](https://actris.eu/topical-centre/data-centre/announcements-resources/actris-cloud-remote-sensing-training-school-lmu)
+Short tutorial into peako and peakTree during the [ACTRIS Cloud Remote Sensing Training School 2025](https://actris.eu/topical-centre/ccres/announcements-resources/actris-cloud-remote-sensing-training-school-lmu-munich)
 
 
 ## Traning school jupyter hub
